@@ -9,6 +9,12 @@ require('dotenv').config();
 
 const PORT = process.env.PORT
 
+const data = require('./data/weather.json');
+
+app.get('/weather-data', (req, res) => {
+    res.json(data)
+});
+
 // a server endpoint 
 app.get('/', // our endpoint name
  function (req, res) { // callback function of what we should do with our request
