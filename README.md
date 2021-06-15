@@ -1,40 +1,29 @@
 # city-explorer-api
 
 
+
+
 # Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Author**: mohmmad noor
+**Version**: 
 
 ## Overview
-As a user of City Explorer, I want to see weather info for the city I searched, so that I know how to pack for an upcoming trip.
+As a user, I want to see the progress of the place I'm looking for 
+
 ## Getting Started
-As a user, the things that need to be done remain only on the React
+What is required of the user has not changed, all he has to do is enter the name of the place
 ## Architecture
-
-As a user, I don't care to see what's behind the curtain
+What is required of the user has not changed, all he has to do is enter the name of the place
 ## Change Log
+Name of feature: ________ Weather (live)________________________
 
-Name of feature: ______________ Set up__________________
+Estimate of time needed to complete: __2hours___
 
-Estimate of time needed to complete: __1hour___
+Start time: __3pm___
 
-Start time: ___4pm__
+Finish time: _5:30pm____
 
-Finish time: ___6pm__
-
-Actual time needed to complete: __2pm___
-
-Name of feature: ______________ Weather (placeholder)
-__________________
-
-Estimate of time needed to complete: __1.5hour___
-
-Start time: ___7pm__
-
-Finish time: ___8pm__
-
-Actual time needed to complete: __1pm___
+Actual time needed to complete: __2.5hours___
 ## Credit and Collaborations
-
-google.com
+google

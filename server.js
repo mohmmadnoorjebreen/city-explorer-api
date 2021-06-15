@@ -7,14 +7,27 @@ app.use(cors()) // after you initialize your express app instance
 
 require('dotenv').config();
 
+const axios = require('axios');
+
 const PORT = process.env.PORT
+
+const WEATHER_BIT_KEY = process.env.WEATHER_BIT_KEY;
 
 const Data = require('./data/weather.json');
 const { response } = require('express');
 
 app.get('/weather', (req, res) => {
-  const responseData = Data.data.map(obj => new weather(obj));
-    res.json(responseData)
+  const lat = req.query.lat;
+  const lon = req.query.lon;
+  if (lat && lon){
+    const weatherBitUrl = `https://api.weatherbit.io/v2.0/forecast/daily?key=${WEATHER_BIT_KEY}&lat=${lat}&lon=${lon}`;
+    axios.get(weatherBitUrl).then((response )=>{
+      const responseData = response.data.data.map(obj => new weather(obj));
+      res.json(responseData)
+    }).catch(error =>{
+      res.send(error.massage)
+    })
+  }
 });
 
 class weather {
