@@ -9,11 +9,20 @@ require('dotenv').config();
 
 const PORT = process.env.PORT
 
-const data = require('./data/weather.json');
+const Data = require('./data/weather.json');
+const { response } = require('express');
 
-app.get('/weather-data', (req, res) => {
-    res.json(data)
+app.get('/weather', (req, res) => {
+  const responseData = Data.data.map(obj => new weather(obj));
+    res.json(responseData)
 });
+
+class weather {
+  constructor(Data){
+    this.description = Data.weather.description,
+    this.date = Data.valid_date
+  }
+}
 
 // a server endpoint 
 app.get('/', // our endpoint name
