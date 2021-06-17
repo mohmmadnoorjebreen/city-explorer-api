@@ -14,8 +14,7 @@ const moviesController = require('./controller/movies.controller');
 const PORT = process.env.PORT
 
 
-const { response } = require('express');
-const { load } = require('dotenv');
+
 
 app.get('/weather', weatherController );
 
